@@ -1,6 +1,6 @@
-import App from './App.js'
+import App from "./App.js"
 
-import { connectDB } from './db.js'
+import { connectDB } from "./db.js"
 
 
 connectDB();
