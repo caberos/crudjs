@@ -1,4 +1,6 @@
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import RegisterPage from "./pages/RegisterPage";
 
 function App(){
   return(
@@ -6,7 +8,7 @@ function App(){
       <Routes>
         <Route path="/" element={<h1>Home Page</h1>}></Route>
         <Route path="/login" element={<h1>login</h1>}></Route>
-        <Route path="/register" element={<h1>Register</h1>}></Route>
+        <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/task" element={<h1>task</h1>}></Route>
         <Route path="/add-task" element={<h1>create task</h1>}></Route>
         <Route path="/task/id" element={<h1>task</h1>}></Route>
@@ -15,5 +17,4 @@ function App(){
     </BrowserRouter>
   )
 }
-
-export default App;
+export default App
