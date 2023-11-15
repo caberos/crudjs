@@ -2,7 +2,7 @@ import {z} from 'zod'
 
 export const registerSchema = z.object({
     username: z.string({
-        required_error: 'username is required'
+        required_error: 'Username is required'
     }),
     email : z.string({
         message: 'Invalid email'
@@ -15,7 +15,7 @@ export const registerSchema = z.object({
 })
 export const loginSchema = z.object({
     username: z.string({
-        required_error: 'username is required'
+        required_error: 'Username is required'
     }),
     email : z.string({
         message: 'Invalid email'

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 
 import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<h1>Home Page</h1>}></Route>
-          <Route path="/login" element={<h1>login</h1>}></Route>
+          <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/register" element={<RegisterPage />}></Route>
           <Route path="/task" element={<h1>task home</h1>}></Route>
           <Route path="/add-task" element={<h1>create task</h1>}></Route>
