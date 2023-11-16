@@ -54,7 +54,7 @@ export const login = async (req, res) => {
             email
         });
         if (!userFound) return res.status(400).json({
-            message: "User not found"
+            message: "User not found"   
         });
 
         const isMatch = await bcrypt.compare(password, userFound.password)
@@ -66,7 +66,7 @@ export const login = async (req, res) => {
             id: userFound._id
         })
 
-        res.cookie('token', token)
+        res.cookie('token', token )
         res.json({
             id: userFound._id,
             username: userFound.username,

@@ -1,6 +1,7 @@
-import {useForm} from 'react-hook-form'
+import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
-import {Link} from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function LoginPage(){
 
@@ -12,6 +13,10 @@ function LoginPage(){
         console.log(data);
         signin(data);
     })
+
+    const navigate = useNavigate()
+
+
     return (
         <div className='flex h-[calc(100vh-100px)] items-center justify-center'>
             <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
