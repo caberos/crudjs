@@ -10,7 +10,6 @@ function LoginPage(){
     const {signin , errors: SigninErrors } = useAuth();
 
     const onSubmit = handleSubmit((data)=> {
-        console.log(data);
         signin(data);
     })
 
